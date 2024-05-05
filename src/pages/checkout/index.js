@@ -113,7 +113,7 @@ function CheckOut() {
                           : "Địa chỉ khác..."
                       }
                       placeholder="name@example.com"
-                    ></Form.Control>{" "}
+                    ></Form.Control>
                   </FloatingLabel>
                   {isShowOptionAddresses && (
                     <div className="select_options scrollbar-primary">

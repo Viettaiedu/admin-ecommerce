@@ -38,26 +38,24 @@ function FormAddress({ isSelected }) {
       } catch (error) {}
     };
     dispatch(setIsLoadingComp(true));
-    const data = JSON.parse(localStorage.getItem("addresses"));
-    if (data) setAddresses(data);
-    else getAddressesAsync();
+    getAddressesAsync();
     dispatch(setIsLoadingComp(false));
   }, []);
   const handleSelectCity = (city) => {
     dispatch(changeFormAddress({ name: "province", value: city.name }));
-    setCity(city);
-    setDistrict(null);
-    setWard(null);
+    // setCity(city);
+    // setDistrict(null);
+    // setWard(null);
   };
   const handleSelectDistrict = (district) => {
     dispatch(changeFormAddress({ name: "district", value: district.name }));
-    setDistrict(district);
-    setWard(null);
+    // setDistrict(district);
+    // setWard(null);
   };
 
   const handleSelectWard = (ward) => {
     dispatch(changeFormAddress({ name: "ward", value: ward.name }));
-    setWard(ward);
+    // setWard(ward);
   };
   return (
     <Form className="">
@@ -117,7 +115,6 @@ function FormAddress({ isSelected }) {
         <Form.Control
           type="text"
           placeholder="124 Nguyen Tat Thanh"
-          disabled={isSelected}
           value={address?.residence}
           name="residence"
           onChange={handleChange}
@@ -132,18 +129,18 @@ function FormAddress({ isSelected }) {
           <Form.Control
             type="text"
             placeholder="name@example.com"
-            disabled={isSelected}
+            name="province"
             value={address?.province || (city?.name ? city.name : "")}
-            onFocus={() => setIsShowSelectOptionCity(true)}
+            onChange={handleChange}
           ></Form.Control>{" "}
         </FloatingLabel>
-        {isShowSelectOptionCity && (
+        {/* {true && (
           <SelectOptions
             setIsShow={setIsShowSelectOptionCity}
             addresses={addresses}
             handleSelect={handleSelectCity}
           ></SelectOptions>
-        )}
+        )} */}
       </div>
       <div className="d-flex mb-2 position-relative" ref={districtRef}>
         <FloatingLabel
@@ -154,22 +151,18 @@ function FormAddress({ isSelected }) {
           <Form.Control
             type="text"
             placeholder="name@example.com"
-            disabled={isSelected || (!address?.district && !city?.name)}
+            name="district"
             value={address?.district || (district?.name ? district.name : "")}
-            onFocus={() => {
-              if (!address.province && !city)
-                return toastInfo("Vui lòng chọn tỉnh/thành");
-              setIsShowSelectOptionDistrict(true);
-            }}
+            onChange={handleChange}
           ></Form.Control>{" "}
         </FloatingLabel>
-        {isShowSelectOptionDistrict && (
+        {/* {isShowSelectOptionDistrict && (
           <SelectOptions
             setIsShow={setIsShowSelectOptionDistrict}
             addresses={city?.districts}
             handleSelect={handleSelectDistrict}
           ></SelectOptions>
-        )}
+        )} */}
       </div>
       <div className="d-flex mb-2 position-relative" ref={wardRef}>
         <FloatingLabel
@@ -180,13 +173,10 @@ function FormAddress({ isSelected }) {
           <Form.Control
             type="text"
             placeholder="name@example.com"
-            disabled={isSelected || (!address?.ward && !district?.name)}
+            name="ward"
+            // disabled={isSelected || (!address?.ward && !district?.name)}
             value={address?.ward || (ward?.name ? ward.name : "")}
-            onFocus={() => {
-              if (!address.district && !district)
-                return toastInfo("Vui lòng chọn huyện");
-              setIsShowSelectOptionWard(true);
-            }}
+            onChange={handleChange}
           ></Form.Control>{" "}
           {/* <div
             className="border rounded-2 px-3 flex-center cursor"
