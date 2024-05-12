@@ -23,7 +23,7 @@ function ThankYouOrder() {
   }, []);
   return (
     <>
-      <HelmetCustom title="ViettaiIT cảm ơn" />
+      <HelmetCustom title="E-COMMERCE cảm ơn" />
       <div className="container px-lg-10">
         <div className="w-100 flex-center">
           <Link

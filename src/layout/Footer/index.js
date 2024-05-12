@@ -18,12 +18,15 @@ function Footer() {
                   width: "120px",
                 }}
               >
-                <LazyImage src="https://res.cloudinary.com/dkkh1gtoj/image/upload/c_fit,w_200,h_60/v1698040260/viettaiit-ecommerce/logo.png" alt="" />
+                <LazyImage
+                  src="https://res.cloudinary.com/dkkh1gtoj/image/upload/c_fit,w_200,h_60/v1698040260/viettaiit-ecommerce/logo.png"
+                  alt=""
+                />
               </Link>
               <div className="d-flex flex-column gap-3 text-size-16">
                 {" "}
                 <span>
-                  Hệ thống cửa hàng ViettaiIT chuyên bán lẻ điện thoại, máy
+                  Hệ thống cửa hàng E-COMMERCE chuyên bán lẻ điện thoại, máy
                   tính laptop, smartwatch, smarthome, phụ kiện chính hãng - Giá
                   tốt, giao miễn phí.
                 </span>
