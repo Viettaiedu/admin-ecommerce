@@ -18,7 +18,7 @@ import {
   resetFormAddress,
   setFromAddress,
 } from "../../features/formAddressSlice";
-import {  useRef, useState } from "react";
+import { useRef, useState } from "react";
 import useHideOnClickOutside from "../../hooks/useHideOnClickOutSide";
 import httpRequest from "../../api/httpRequest";
 import { handlePaymentService } from "../../services/orderService";
@@ -34,7 +34,6 @@ function CheckOut() {
   const navigate = useNavigate();
   const [payOption, setPayOption] = useState(1);
 
- 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { fullName, phoneNumber } = address;
@@ -73,10 +72,7 @@ function CheckOut() {
                 to={clientRoutes.home}
                 className={`logo d-block fs-4 text-white rounded w-15`}
               >
-                <LazyImage
-                  src="https://res.cloudinary.com/dkkh1gtoj/image/upload/c_fit,w_200,h_60/v1698040260/viettaiit-ecommerce/logo.png"
-                  alt=""
-                />
+                <LazyImage src="" alt="" />
               </Link>
             </div>
             <Row className="">

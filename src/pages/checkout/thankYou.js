@@ -30,10 +30,7 @@ function ThankYouOrder() {
             to={clientRoutes.home}
             className={`logo d-block fs-4 text-white rounded w-15`}
           >
-            <LazyImage
-              src="https://res.cloudinary.com/dkkh1gtoj/image/upload/c_fit,w_200,h_60/v1698040260/viettaiit-ecommerce/logo.png"
-              alt=""
-            />
+            <LazyImage src="https://res.cloudinary.com/dkkh1gtoj/image/upload/v1717317641/logo_tfhi3m.png" alt="" />
           </Link>
         </div>
 

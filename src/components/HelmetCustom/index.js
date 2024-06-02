@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import React from "react";
-import logo from "../../assets/my-image.jpg";
 import PropTypes from "prop-types";
+import logo from "../../assets/no-image.webp";
 function HelmetCustom({ title }) {
   return (
     <Helmet>
