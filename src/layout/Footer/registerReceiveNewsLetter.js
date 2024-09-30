@@ -5,7 +5,7 @@ function RegisterReceiveNewsletter() {
     <div className=" bg-black text-white mt-5 py-5">
       <div className="container d-flex flex-column gap-2 justify-content-center align-items-center">
         <h3 className="text-uppercase  text-center fw-bold">
-          Đăng ký nhận tin từ VIẾT TÀI
+          Đăng ký nhận tin từ Ecommerce
         </h3>
         <p className="fw-light">
           Nhận thông tin sản phẩm mới nhất và các chương trình khuyến mãi.
@@ -17,7 +17,9 @@ function RegisterReceiveNewsletter() {
               name="email"
               className=""
             />
-            <Button variant="outline-danger btn-sm" className="flex-center">Gửi</Button>
+            <Button variant="outline-danger btn-sm" className="flex-center">
+              Gửi
+            </Button>
           </Form.Group>
         </Form>
       </div>
